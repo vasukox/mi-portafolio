@@ -18,34 +18,29 @@ import {
   ProjectBadge
 } from './ProjectsElements';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Sistema de Facturación Electrónica',
-      description: 'API local desarrollada con FastAPI que se interconecta con servicios externos para la emisión de facturas electrónicas en tiempo real. Incluye gestión de bases de datos SQL y NoSQL para el manejo de transacciones.',
-      img: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
-      technologies: ['Python', 'FastAPI', 'MySQL', 'MongoDB', 'REST API'],
+      title: 'Chatbot Inteligente con IA Conversacional',
+      description: 'Desarrollé chatbot inteligente con procesamiento de lenguaje natural capaz de atender consultas de clientes 24/7, logrando 85% de resolución autónoma sin intervención humana. Implementé arquitectura en capas siguiendo principios SOLID, separando lógica de negocio, integración con LLM y capa de presentación para máxima mantenibilidad. Integré modelo de IA conversacional optimizado para español con contexto empresarial específico, mejorando precisión de respuestas en 40% vs. modelos genéricos.',
+      img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=800&q=80',
+      technologies: ['Python', 'FastAPI', 'LLM Integration', 'NLP'],
       badge: 'Featured',
-      demo: '#',
-      code: '#',
+      code: 'https://github.com/vasukox/chatAI',
     },
     {
       title: 'Dashboard Analítico Web',
       description: 'Panel interactivo construido con React y TypeScript que visualiza métricas de negocio en tiempo real. Incluye gráficos dinámicos, filtros avanzados y exportación de datos a múltiples formatos.',
       img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
       technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'Chart.js'],
-      demo: '#',
-      code: '#',
     },
     {
       title: 'E-commerce Full Stack',
       description: 'Plataforma de comercio electrónico completa con carrito de compras, procesamiento de pagos, gestión de inventario y panel de administración. Diseño responsive y optimizado para conversión.',
       img: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=800&q=80',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'CSS3'],
-      demo: '#',
-      code: '#',
     },
   ];
 
@@ -97,14 +92,12 @@ const ProjectsSection = () => {
                   ))}
                 </TechStack>
                 <ProjectsLinks>
-                  <ProjectsLink href={project.demo} target="_blank" rel="noopener noreferrer" $primary>
-                    <FiExternalLink size={16} />
-                    Ver Demo
-                  </ProjectsLink>
-                  <ProjectsLink href={project.code} target="_blank" rel="noopener noreferrer">
-                    <FiGithub size={16} />
-                    Código
-                  </ProjectsLink>
+                  {project.code && project.code !== '#' && (
+                    <ProjectsLink href={project.code} target="_blank" rel="noopener noreferrer" $primary>
+                      <FiGithub size={16} />
+                      Ver Código
+                    </ProjectsLink>
+                  )}
                 </ProjectsLinks>
               </ProjectsInfo>
             </ProjectsCard>

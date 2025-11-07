@@ -45,7 +45,7 @@ const AboutSection = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <Img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=60" alt="about" />
+                  <Img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Desarrollo de software" />
                 </motion.div>
               </ImgWrap>
             </Column2>

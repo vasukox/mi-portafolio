@@ -55,7 +55,7 @@ const HeroSection = () => {
           <HeroP>Ingeniero de Software · Full Stack · Diseño de experiencias web modernas</HeroP>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}>
-          <Avatar src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=60" alt="Andrés Díaz" />
+          <Avatar src={process.env.PUBLIC_URL + '/assets/foto.jpeg'} alt="Andrés Díaz" />
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}>
           <HeroBtnWrapper>

@@ -1,50 +1,82 @@
 
 import React from 'react';
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiHtml5, SiCss3, SiMongodb, SiMysql, SiTypescript, SiVisualstudiocode, SiNpm } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaDocker, FaPhp, FaDatabase } from 'react-icons/fa';
+import { SiJavascript, SiPostgresql, SiMysql, SiMicrosoftsqlserver, SiSupabase, SiNestjs, SiDjango, SiGithub, SiAstro } from 'react-icons/si';
 import { TechnologiesContainer, TechnologiesH1, TechnologiesIntro, Grid, CategoryCard, CategoryTitle, ItemsGrid, Item, IconWrapper, ItemLabel } from './TechnologiesElements';
 import { motion } from 'framer-motion';
 
 const TechnologiesSection = () => {
   const categories = [
     {
+      title: 'Lenguajes de Programación',
+      items: [
+        { label: 'Python', icon: <FaPython /> },
+        { label: 'JavaScript', icon: <SiJavascript /> },
+        { label: 'PHP', icon: <FaPhp /> },
+      ],
+    },
+    {
       title: 'Frontend',
       items: [
-        { label: 'HTML5', icon: <SiHtml5 /> },
-        { label: 'CSS3', icon: <SiCss3 /> },
-        { label: 'JavaScript', icon: <SiJavascript /> },
-        { label: 'ReactJS', icon: <FaReact /> },
-        { label: 'TypeScript', icon: <SiTypescript /> },
-        { label: 'Figma', icon: <FaGitAlt /> },
+        { label: 'React.js', icon: <FaReact /> },
+        { label: 'Astro', icon: <SiAstro /> },
       ],
     },
     {
       title: 'Backend',
       items: [
-        { label: 'Node.js', icon: <FaNodeJs /> },
-        { label: 'Express', icon: <FaNodeJs /> },
+        { label: 'NestJs', icon: <SiNestjs /> },
+        { label: 'Django', icon: <SiDjango /> },
+        { label: 'RESTful APIs', icon: <FaNodeJs /> },
+      ],
+    },
+    {
+      title: 'Bases de Datos',
+      items: [
+        { label: 'PostgreSQL', icon: <SiPostgresql /> },
         { label: 'MySQL', icon: <SiMysql /> },
-        { label: 'MongoDB', icon: <SiMongodb /> },
-        { label: 'Next.js', icon: <FaReact /> },
+        { label: 'SQL Server', icon: <SiMicrosoftsqlserver /> },
+        { label: 'Supabase', icon: <SiSupabase /> },
+      ],
+    },
+    {
+      title: 'Data Engineering',
+      items: [
+        { label: 'ETL Pipelines', icon: <FaDatabase /> },
+        { label: 'Data Warehousing', icon: <FaDatabase /> },
+        { label: 'Transformación de Datos', icon: <FaDatabase /> },
+      ],
+    },
+    {
+      title: 'Infraestructura & DevOps',
+      items: [
+        { label: 'Docker', icon: <FaDocker /> },
+        { label: 'Git', icon: <FaGitAlt /> },
+        { label: 'GitHub', icon: <SiGithub /> },
+        { label: 'CI/CD', icon: <FaGitAlt /> },
+      ],
+    },
+    {
+      title: 'Automatización & IA',
+      items: [
+        { label: 'n8n', icon: <FaNodeJs /> },
+        { label: 'IA Conversacional', icon: <FaNodeJs /> },
+        { label: 'Chatbots', icon: <FaNodeJs /> },
+      ],
+    },
+    {
+      title: 'Metodologías',
+      items: [
+        { label: 'SCRUM', icon: <FaGitAlt /> },
+        { label: 'Agile', icon: <FaGitAlt /> },
+        { label: 'Clean Architecture', icon: <FaGitAlt /> },
       ],
     },
     {
       title: 'Aprendiendo',
       items: [
-        { label: 'Python', icon: <FaPython /> },
-        { label: 'Astro', icon: <FaReact /> },
-        { label: 'Docker', icon: <FaDocker /> },
-        { label: 'TypeScript', icon: <SiTypescript /> },
-      ],
-    },
-    {
-      title: 'Herramientas',
-      items: [
-        { label: 'Git', icon: <FaGitAlt /> },
-  { label: 'VSCode', icon: <SiVisualstudiocode /> },
-        { label: 'npm', icon: <SiNpm /> },
-        { label: 'Terminal', icon: <FaGitAlt /> },
-        { label: 'GitHub', icon: <FaGitAlt /> },
+        { label: 'Análisis de Datos', icon: <FaDatabase /> },
+        { label: 'DevOps', icon: <FaDocker /> },
       ],
     },
   ];
